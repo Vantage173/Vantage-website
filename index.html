@@ -330,19 +330,10 @@
           Get launch updates, early access opportunities, and first access to the premium Vantage experience.
         </p>
 
-       <form action="https://formsubmit.co/hello@tryvantage.io" method="POST" class="waitlist-form">
-  <input type="hidden" name="_subject" value="New Vantage waitlist signup">
-  <input type="hidden" name="_captcha" value="false">
-
-  <input
-    type="email"
-    name="email"
-    placeholder="Enter your email"
-    required
-  />
-
-  <button type="submit">Request access</button>
-</form>
+        <form class="waitlist-form" onsubmit="event.preventDefault()">
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">Request access</button>
+        </form>
 
         <div class="domain-note">tryvantage.io</div>
       </div>
