@@ -253,6 +253,7 @@ main,
 .showcase-card,
 .price-card,
 .waitlist-card,
+.app-cta-card,
 .preview-shell {
   box-shadow: var(--shadow);
 }
@@ -866,6 +867,66 @@ h2 {
   font-size: 14px;
 }
 
+.app-cta-section {
+  padding: 0 0 24px;
+}
+
+.app-cta-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: center;
+  border: 1px solid rgba(245, 158, 11, 0.18);
+  border-radius: 32px;
+  background:
+    linear-gradient(135deg, rgba(245, 158, 11, 0.10), rgba(52, 209, 124, 0.05) 42%, rgba(255,255,255,0.025)),
+    rgba(3, 8, 22, 0.96);
+  padding: 36px;
+}
+
+.app-cta-card h2 {
+  max-width: 680px;
+}
+
+.app-cta-card p {
+  max-width: 700px;
+  margin: 18px 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.app-cta-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+  min-width: min(100%, 300px);
+}
+
+.app-cta-button {
+  min-height: 56px;
+  width: 100%;
+  border: 1px solid rgba(245, 158, 11, 0.28);
+  border-radius: 18px;
+  background: rgba(245, 158, 11, 0.12);
+  color: rgba(245, 195, 91, 0.92);
+  font-size: 16px;
+  font-weight: 800;
+  padding: 0 24px;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.app-cta-action p {
+  max-width: 300px;
+  margin: 0;
+  color: rgba(255,255,255,0.48);
+  font-size: 13px;
+  line-height: 1.55;
+  text-align: right;
+}
+
 @media (max-width: 1100px) {
   .hero,
   .split-top,
@@ -887,6 +948,21 @@ h2 {
 
   .showcase-head {
     align-items: start;
+  }
+
+  .app-cta-card {
+    grid-template-columns: 1fr;
+  }
+
+  .app-cta-action {
+    align-items: flex-start;
+    min-width: 0;
+    width: min(100%, 340px);
+  }
+
+  .app-cta-action p {
+    max-width: 100%;
+    text-align: left;
   }
 }
 
@@ -919,6 +995,15 @@ h2 {
 
   .waitlist-card {
     padding: 32px 20px;
+  }
+
+  .app-cta-card {
+    padding: 28px 20px;
+    border-radius: 26px;
+  }
+
+  .app-cta-action {
+    width: 100%;
   }
 }
 
